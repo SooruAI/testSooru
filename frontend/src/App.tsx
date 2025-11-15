@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactNode } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
