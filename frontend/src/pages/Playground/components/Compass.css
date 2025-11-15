@@ -1,0 +1,143 @@
+.compass-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: black;
+}
+
+.rotate-button {
+  width: 50px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  
+}
+
+.rotate-button:hover {
+  background-color: #4F46E5;
+}
+
+.rotate-button svg {
+  width: 32px !important;
+  height: 32px !important;
+  transform-origin: center;
+}
+
+.rotate-left-icon {
+  transform: rotate(1deg);
+}
+
+.rotate-right-icon {
+  transform: scaleX(-1) rotate(1deg);
+}
+
+.compass-body {
+  position: relative;
+}
+
+.compass-dial {
+  position: absolute;
+  inset: 0;
+  border-radius: 100%;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compass-text {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.south {
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.north {
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.east {
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.west {
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.compass-needle {
+  position: absolute;
+  height: 90%;
+  width: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5%;
+}
+
+.needle-top {
+  height: 50%;
+  width: 100%;
+  background-color: rgb(68, 67, 67);
+}
+
+.needle-bottom {
+  height: 50%;
+  width: 100%;
+  background-color: red;
+}
+
+@media screen and (max-width: 767px) {
+  .compass-container {
+    transform: scale(0.7);
+    transform-origin: bottom right;
+    right: 10px;
+    bottom: 10px;
+    position: fixed;
+  }
+  
+  .rotate-button {
+    width: 40px;
+    height: 35px;
+  }
+
+  .rotate-button svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  .compass-text {
+    font-size: 0.875rem;
+  }
+  
+  .compass-container {
+    gap: 2px;
+  }
+
+  .rotate-button {
+  padding: 2px;
+    
+  }
+
+  
+
+ 
+}

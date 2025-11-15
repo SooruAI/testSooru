@@ -1,0 +1,83 @@
+.camera-toggle-group {
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.settings-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+    background-color: white !important;
+}
+
+.save-reset-controls {
+    position: fixed;
+    top: 90%;
+    left: 40%;
+    display: flex;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.save-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.save-button:hover {
+    background: #333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.reset-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .save-reset-controls {
+        top: 10px;
+        left: 10px;
+        gap: 6px;
+    }
+    
+    .save-button,
+    .reset-button {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

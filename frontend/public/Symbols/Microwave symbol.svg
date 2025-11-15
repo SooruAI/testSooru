@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Microwave symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Microwave-symbol" transform="translate(1.000000, 1.000000)">
+            <rect id="Rectangle-5" fill-opacity="0.00999999978" fill="#FFFFFF" x="0" y="0" width="42" height="42"></rect>
+            <g id="Group-10" transform="translate(8.000000, 10.500000)" stroke="#000000">
+                <path d="M0,2.5 C3.82300877,5.83333333 7.8993412,5.83333333 12.2289973,2.5 C16.5586534,-0.833333333 20.8156543,-0.833333333 25,2.5" id="Path-8"></path>
+                <path d="M0,10.5 C3.82300877,13.8333333 7.8993412,13.8333333 12.2289973,10.5 C16.5586534,7.16666667 20.8156543,7.16666667 25,10.5" id="Path-8-Copy"></path>
+                <path d="M0,18.5 C3.82300877,21.8333333 7.8993412,21.8333333 12.2289973,18.5 C16.5586534,15.1666667 20.8156543,15.1666667 25,18.5" id="Path-8-Copy-2"></path>
+            </g>
+            <rect id="Rectangle-4" stroke="#000000" x="0" y="0" width="41" height="41" rx="8"></rect>
+        </g>
+    </g>
+</svg>

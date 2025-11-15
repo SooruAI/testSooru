@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Dishwasher symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dishwasher-symbol">
+            <polygon id="Rectangle-path" fill-opacity="0.02" fill="#FFFFFF" points="0 0 42 0 42 42 0 42"></polygon>
+            <g id="Group-6" transform="translate(4.000000, 0.000000)" stroke="#000000">
+                <path d="M0,41.1587839 C6.18391192,40.5521388 9.25427406,38.1942202 9.21108633,34.085028 C9.16789868,29.9758358 9.16789868,27.3532136 9.21108633,26.2171615 C3.26127591,24.6156164 0.28637074,22.2325973 0.28637074,19.0681044 C0.28637074,15.9036114 0.381020355,9.81172762 0.570319664,0.79245283 L11.8867925,0.79245283" id="Path-2"></path>
+                <path d="M11.0943396,41.1587839 C17.2782515,40.5521388 20.3486137,38.1942202 20.305426,34.085028 C20.2622383,29.9758358 20.2622383,27.3532136 20.305426,26.2171615 C14.3556155,24.6156164 11.3807104,22.2325973 11.3807104,19.0681044 C11.3807104,15.9036114 11.47536,9.81172762 11.6646593,0.79245283 L22.9811321,0.79245283" id="Path-2" transform="translate(17.037736, 20.975618) scale(-1, 1) translate(-17.037736, -20.975618) "></path>
+                <path d="M26.9433962,0 L26.9433962,11.6525287" id="Path-3"></path>
+                <path d="M30.9056604,0 L30.9056604,11.6525287" id="Path-3"></path>
+                <path d="M34.8679245,0 L34.8679245,16.5314476 C33.6944323,18.7096688 32.3736776,19.8139254 30.9056604,19.8442173 L30.9056604,41.5017065" id="Path-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

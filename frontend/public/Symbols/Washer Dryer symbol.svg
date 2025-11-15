@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="49px" viewBox="0 0 42 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Washer Dryer symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Washer-Dryer-symbol" transform="translate(0.000000, 1.000000)">
+            <rect id="Rectangle-5" fill-opacity="0.00999999978" fill="#FFFFFF" x="0" y="3" width="42" height="42"></rect>
+            <g id="Group-6-Copy-2" transform="translate(8.000000, 22.000000)" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Dryer-Symbol-Copy-4" transform="translate(0.209136, 0.001528)">
+                    <polygon id="Rectangle-2" fill-opacity="0.05" fill="#FFFFFF" points="0 0 0 25.0572956 24.7872817 25.0572956 24.7872817 0"></polygon>
+                    <ellipse id="Oval" cx="12.6366534" cy="12.2829881" rx="9.72050262" ry="9.82639045"></ellipse>
+                </g>
+            </g>
+            <g id="Washing" transform="translate(7.000000, 0.000000)">
+                <path d="M1.8,4.03183594 L5.43171875,17.9935547 L21.7764583,17.9935547 L25.5605729,4.03183594 C22.4656771,3.61699219 20.4799479,2.47304687 19.6033854,0.6 C15.6546528,3.71601562 11.8216493,3.71601562 8.104375,0.6 C6.90736111,2.88789063 4.80590278,4.03183594 1.8,4.03183594 Z" id="Path-4" fill-opacity="0.02" fill="#FFFFFF"></path>
+                <polyline id="Path-6" stroke="#000000" points="0.3 0.4078125 5.45507812 18 21.8332031 18 26.7779297 0.4078125"></polyline>
+                <path d="M1.5,3.87011719 C1.5,3.87011719 6.07441406,4.74667969 8.16943359,0.752050781 C10.4493164,3.87011719 16.3857422,4.00253906 19.546582,0.4078125 C21.4967773,2.71601563 23.6166016,3.87011719 25.9060547,3.87011719" id="Path-7" stroke="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>

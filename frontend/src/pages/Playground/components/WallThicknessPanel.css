@@ -1,0 +1,129 @@
+/* WallThicknessPanel.css */
+.wall-thickness-panel {
+  position: fixed;
+  bottom: 160px; 
+  right: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  z-index: 1001;
+  width: 220px; 
+  border: 1px solid #e0e0e0;
+  pointer-events: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.panel-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333 !important;
+  text-align: center;
+  font-size: 14px;
+}
+
+.hh{
+  color: #333 !important;
+}
+
+.width-display {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  color: #2196F3;
+}
+
+.width-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-button {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #2196F3;
+  background: white;
+  color: #2196F3;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  pointer-events: auto;
+}
+
+.control-button:not(:disabled) {
+  background: #2196F3;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.3);
+}
+
+.control-button:active:not(:disabled) {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(33, 150, 243, 0.2);
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #ccc;
+  background: #f5f5f5;
+}
+
+.control-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  background: #f5f5f5;
+}
+
+.width-bar {
+  flex: 1;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.width-indicator {
+  height: 100%;
+  background: linear-gradient(90deg, #4CAF50 0%, #2196F3 50%, #FF9800 100%);
+  border-radius: 4px;
+  transition: width 0.2s ease;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .wall-thickness-panel {
+    bottom: 10px; 
+    right: 5px;
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .panel-header {
+    font-size: 12px; 
+  }
+  
+  .control-button {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  
+  .width-display {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}

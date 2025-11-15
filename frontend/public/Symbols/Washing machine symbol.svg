@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="42px" viewBox="0 0 43 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Washing machine symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Washing-machine-symbol" transform="translate(1.000000, 0.000000)">
+            <rect id="Rectangle-5" fill-opacity="0.00999999978" fill="#FFFFFF" x="0" y="0" width="42" height="42"></rect>
+            <g id="Group-9" transform="translate(0.000000, 9.000000)" stroke="#000000">
+                <polyline id="Path-6" points="0 0.933333333 8.01901042 28.2989583 33.4960938 28.2989583 41.1878906 0.933333333"></polyline>
+                <path d="M1.4,6.02018229 C1.4,6.02018229 8.51575521,7.38372396 11.7746745,1.16985677 C15.3211589,6.02018229 24.555599,6.22617187 29.4724609,0.634375 C32.5060981,4.22491319 35.8036024,6.02018229 39.364974,6.02018229" id="Path-7"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,635 @@
+.tool-panel {
+  position: fixed; 
+  left: 75px; 
+  background-color: white !important;
+  border-radius: 8px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
+  width: 270px;
+  max-height: 65vh;
+  overflow: hidden;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0 !important;
+  pointer-events: auto;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), 
+              0px -4px 6px rgba(0, 0, 0, 0.1),  
+              0px 4px 6px rgba(0, 0, 0, 0.1);  
+  border-radius: 5px;
+                          
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0 !important;
+  background-color: #f8f9fa !important;
+  border-radius: 8px 8px 0 0;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333 !important;
+  font-weight: 600;
+}
+
+.close-panel {
+  background: none !important;
+  border: none !important;
+  font-size: 20px;
+  color: #666 !important;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.close-panel:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #333 !important;
+}
+
+.panel-content {
+  padding: 16px;
+  overflow-y: auto; 
+  flex: 1; 
+  max-height: calc(65vh - 60px); 
+}
+
+.mini-floor-plan-container {
+  width: 228px;
+  height: 120px;
+  margin-bottom: 12px;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.mini-floor-plan {
+  background-color: #f8f9fa !important;
+ }
+
+.mini-room {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mini-room:hover {
+  opacity: 0.8;
+  stroke: #2196F3 !important;
+  stroke-width: 2px;
+}
+
+.area-display {
+  background-color: #f8f9fa !important;
+  padding: 9px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #e0e0e0 !important;
+}
+
+.total-area-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-area-label {
+  font-size: 14px;
+  color: #555 !important;
+}
+
+.total-area-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333 !important;
+}
+
+.selected-room-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-type {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333 !important;
+}
+
+.room-area {
+  font-size: 14px;
+  color: #333 !important;
+}
+
+.room-dimensions {
+  font-size: 12px;
+  color: #666 !important;
+}
+
+.project-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #f8f9fa !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.menu-option:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.option-icon {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.option-text {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #333 !important;
+}
+
+.option-arrow {
+  font-size: 18px;
+  color: #aaa !important;
+}
+
+.panel-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.exports-options{
+  position: relative;
+  right: 0.35rem;
+}
+
+.panel-options p {
+  color: #333 !important;
+}
+
+.panel-options button {
+  padding: 8px 12px;
+  background-color: #f0f0f0 !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333 !important;
+  transition: all 0.2s ease;
+}
+
+.panel-options button:hover {
+  background-color: #e5e5e5 !important;
+}
+
+.slider-control,
+.select-control,
+.checkbox-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.slider-control label,
+.select-control label,
+.checkbox-control label {
+  font-size: 14px;
+  color: #555 !important;
+}
+
+.checkbox-control {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.select-control select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ddd !important;
+  background-color: white !important;
+  color: #333 !important;
+}
+
+.furniture-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.furniture-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.furniture-item {
+  color: #333 !important;
+}
+
+.furniture-item:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.furniture-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.export-button {
+  background-color: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+  padding: 10px !important;
+  text-align: center;
+  color: #333 !important;
+}
+
+.export-button:hover {
+  background-color: #e9ecef !important;
+}
+
+.help-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+}
+
+.help-links li {
+  margin-bottom: 10px;
+}
+
+.help-links a {
+  color: #0066cc !important;
+  text-decoration: none;
+}
+
+.help-links a:hover {
+  text-decoration: underline;
+}
+
+.info-options {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-options .menu-option {
+  background-color: #f2f2f2 !important;
+  border: none !important;
+  padding: 12px 16px;
+}
+
+.info-options .menu-option:hover {
+  background-color: #d9d8d8 !important;
+}
+
+
+@media (max-width: 768px) {
+  .tool-panel {
+   display: none;
+  }
+}
+
+.option-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.back-button {
+  background-color: #f2f2f2 !important;
+  border: none !important;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:hover {
+  background-color: #e5e5e5 !important;
+}
+
+.section-title1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333 !important; 
+ 
+}
+
+.instruction-text {
+  margin: 0 0 0px 0;
+  font-size: 13px;
+  color: #666 !important;
+}
+
+.room-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin-top: 2px;
+  position: relative;
+  right: 5px;
+}
+
+.room-type-item {
+  padding: 8px 10px !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  transition: all 0.2s ease !important;
+  font-size: 13px !important;
+  color: #333 !important;
+}
+
+.room-type-item:hover {
+  filter: brightness(0.9) !important;
+  transform: scale(1.02);
+}
+
+.label-input-container {
+  margin-top: 6px;
+}
+
+.label-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd !important;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white !important;
+  color: #333 !important;
+}
+
+.label-input:focus {
+  outline: none;
+  border-color: #aaa !important;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.click-instruction {
+  font-size: 12px;
+  color: #666 !important;
+  margin-top: 6px;
+  font-style: italic;
+}
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.room-type-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.touch-dragging {
+  opacity: 0.7;
+}
+
+.touch-drop-target {
+  stroke: #2196F3 !important;
+  stroke-width: 3px !important;
+  stroke-dasharray: 5,3 !important;
+  animation: pulse-border 1s infinite !important;
+}
+
+@keyframes pulse-border {
+  0% { stroke-opacity: 0.4; }
+  50% { stroke-opacity: 0.8; }
+  100% { stroke-opacity: 0.4; }
+}
+
+.room-updated {
+  transition: fill 0.3s ease-out;
+  fill: #2196F3 !important;
+}
+
+.touch-dragging {
+  background-color: rgba(33, 150, 243, 0.2) !important;
+}
+
+
+.export-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #f5f5f5 !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: #333 !important;
+}
+
+.export-button:hover:not(:disabled) {
+  background-color: #e8e8e8 !important;
+  border-color: #ccc !important;
+}
+
+.export-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5 !important;
+  color: #999 !important;
+}
+
+.section-header{
+  color: black !important;
+}
+
+.tab-button.active {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.tab-button.active:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.tab-button:not(.active) {
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
+}
+
+
+.panel-content::-webkit-scrollbar,
+.signs-symbols-grid::-webkit-scrollbar {
+  width: 20px !important;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.panel-content::-webkit-scrollbar-thumb,
+.signs-symbols-grid::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  min-height: 50px;
+}
+
+.panel-content::-webkit-scrollbar-thumb:hover,
+.signs-symbols-grid::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .panel-content, .signs-symbols-grid {
+    overflow-y: scroll !important;
+    scrollbar-width: auto !important; 
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+  
+  .panel-content::-webkit-scrollbar,
+  .signs-symbols-grid::-webkit-scrollbar {
+    width: 24px !important;
+  }
+  
+  .panel-content::-webkit-scrollbar-thumb,
+  .signs-symbols-grid::-webkit-scrollbar-thumb {
+    min-height: 60px !important;
+  }
+}
+
+
+
+.room-type-item[data-room-type="LivingRoom"] {
+  background-color: #FFBDB9 !important;
+  border: 2px solid #FFBDB9 !important;
+}
+
+.room-type-item[data-room-type="Kitchen"] {
+  background-color: #E2CCE2 !important;
+  border: 2px solid #E2CCE2 !important;
+}
+
+.room-type-item[data-room-type="Bathroom"] {
+  background-color: #A0D0F0 !important;
+  border: 2px solid #A0D0F0 !important;
+}
+
+.room-type-item[data-room-type="MasterRoom"] {
+  background-color: #FFDCC5 !important;
+  border: 2px solid #FFDCC5 !important;
+}
+
+.room-type-item[data-room-type="SecondRoom"] {
+  background-color: #F9DD7D !important;
+  border: 2px solid #F9DD7D !important;
+}
+
+.room-type-item[data-room-type="Balcony"] {
+  background-color: #C2E5E2 !important;
+  border: 2px solid #C2E5E2 !important;
+}
+
+.room-type-item[data-room-type="DiningRoom"] {
+  background-color: #BADEBC !important;
+  border: 2px solid #BADEBC !important;
+}
+
+.room-type-item[data-room-type="ChildRoom"] {
+  background-color: #DFBDFF !important;
+  border: 2px solid #DFBDFF !important;
+}
+
+.room-type-item[data-room-type="PoojaRoom"] {
+  background-color: #CDE6F9 !important;
+  border: 2px solid #CDE6F9 !important;
+}
+
+.room-type-item[data-room-type=" "] {
+  background-color: #D0D0D0 !important;
+  border: 2px solid #D0D0D0 !important;
+}
+
+.room-type-item[data-room-type="LivingRoom"]:hover {
+  background-color: #FFBDB9 !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="Kitchen"]:hover {
+  background-color: #E2CCE2 !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="Bathroom"]:hover {
+  background-color: #A0D0F0 !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="MasterRoom"]:hover {
+  background-color: #FFDCC5 !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="SecondRoom"]:hover {
+  background-color: #F9DD7D !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="Balcony"]:hover {
+  background-color: #C2E5E2 !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="DiningRoom"]:hover {
+  background-color: #BADEBC !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="ChildRoom"]:hover {
+  background-color: #DFBDFF !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type="PoojaRoom"]:hover {
+  background-color: #CDE6F9 !important;
+  border: 2px solid black !important;
+}
+
+.room-type-item[data-room-type=" "]:hover {
+  background-color: #D0D0D0 !important;
+  border: 2px solid black !important;
+}

@@ -1,0 +1,26 @@
+{
+  "short_name": "Sooru.AI",
+  "name": "Sooru.AI - Syntax to Skylines",
+  "icons": [
+    {
+      "src": "SooruAI.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "SooruAI.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "SooruAI.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "description": "Sooru.AI is an AI-powered floor plan generator that creates intelligent home layouts automatically. Generate optimized floor plans for houses and residential buildings."
+}

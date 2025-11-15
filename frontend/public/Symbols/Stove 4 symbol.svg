@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="43px" viewBox="0 0 44 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Stove 4 Symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stove-4-Symbol" transform="translate(1.000000, 1.000000)">
+            <rect id="Rectangle-5" fill-opacity="0.02" fill="#FFFFFF" x="0" y="0" width="42" height="42"></rect>
+            <g id="cirkels" fill-rule="nonzero" stroke="#000000">
+                <circle id="Oval" cx="33.6792453" cy="6.73584906" r="6.73584906"></circle>
+                <ellipse id="Oval" cx="7.52830189" cy="33.6650677" rx="7.52830189" ry="7.5141243"></ellipse>
+                <path d="M34.0754717,25.3584906 C29.6988758,25.3584906 26.1509434,28.9064227 26.1509434,33.2830189 C26.1509434,37.659615 29.6988758,41.2075472 34.0754717,41.2075472 C38.4520676,41.2075472 42,37.659615 42,33.2830189 C42,28.9064227 38.4520676,25.3584906 34.0754717,25.3584906 Z" id="Oval"></path>
+                <path d="M7.83339623,0 C3.94479057,0 0.79245283,3.14640123 0.79245283,7.02768376 C0.79245283,10.9089664 3.94479057,14.0553676 7.83339623,14.0553676 C11.7220019,14.0553676 14.8743396,10.9089664 14.8743396,7.02768376 C14.8743396,3.14640123 11.7220019,0 7.83339623,0 Z" id="Oval"></path>
+            </g>
+        </g>
+    </g>
+</svg>

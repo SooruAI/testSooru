@@ -1,0 +1,231 @@
+/* Object Info Panel Styles */
+.object-info-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 500px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 1000;
+    font-family: system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.object-info-panel__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+}
+
+.object-info-panel__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.object-info-panel__close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    color: #666;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.object-info-panel__close-btn:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.object-info-panel__content {
+    padding: 16px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.object-info-panel__image-container {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.object-info-panel__image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.object-info-panel__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.object-info-panel__name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.object-info-panel__description {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.object-info-panel__metadata {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border-left: 3px solid #1976d2;
+}
+
+.object-info-panel__metadata-item {
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.object-info-panel__metadata-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.object-info-panel__position {
+    font-family: monospace;
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.object-info-panel__actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.object-info-panel__action-btn {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.object-info-panel__action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.object-info-panel__action-btn--duplicate {
+    border-color: #1976d2;
+    color: #1976d2;
+}
+
+.object-info-panel__action-btn--duplicate:hover {
+    background-color: #1976d2;
+    color: white;
+}
+
+.object-info-panel__action-btn--delete {
+    border-color: #d32f2f;
+    color: #d32f2f;
+}
+
+.object-info-panel__action-btn--delete:hover {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.object-info-panel__note {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .object-info-panel {
+        width: calc(100vw - 20px);
+        right: 10px;
+        top: 10px;
+        max-height: 60vh;
+    }
+    
+    .object-info-panel__actions {
+        flex-direction: column;
+    }
+    
+    .object-info-panel__action-btn {
+        width: 100%;
+    }
+}
+
+/* Scrollbar styling */
+.object-info-panel__content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.object-info-panel__content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.object-info-panel__content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+}
+
+.object-info-panel__content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

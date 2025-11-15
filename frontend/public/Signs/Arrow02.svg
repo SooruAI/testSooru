@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" width="28px" height="40px" viewBox="-18.0 -24.0 36.0 48.0"><defs><g id="c1"><path fill="#000000" stroke="none" d="M0.0 40.0 L0.0 0.0 28.0 20.0 0.0 40.0"/></g><g id="c2"><g><use transform="matrix(1.0,0.0,0.0,1.0,0.0,0.0)" xlink:href="#c1"/></g></g></defs><g><g><use transform="matrix(1.0,0.0,0.0,1.0,-14.0,-20.0)" xlink:href="#c2" class="color"/></g></g></svg>

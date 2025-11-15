@@ -1,0 +1,247 @@
+.vizpanel-container {
+    position: fixed;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 260px; 
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), 
+                0px -4px 6px rgba(0, 0, 0, 0.1),  
+                0px 4px 6px rgba(0, 0, 0, 0.1);  
+    border-radius: 5px;
+}
+
+.vizpanel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px; 
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.vizpanel-header h2 {
+    margin: 0;
+    font-size: 16px; 
+    color: #333;
+}
+
+.vizpanel-close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.vizpanel-close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+.vizpanel-content {
+    padding: 12px; 
+}
+
+.vizpanel-section {
+    margin-bottom: 14px;
+}
+
+.vizpanel-section:last-child {
+    margin-bottom: 0;
+}
+
+.vizpanel-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px; 
+    font-size: 14px;
+    color: #444;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+}
+
+.vizpanel-toggle-option {
+    margin-bottom: 8px; 
+}
+
+.vizpanel-toggle-option:last-child {
+    margin-bottom: 0;
+}
+
+.vizpanel-toggle-option label {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    cursor: pointer;
+    color: #333;
+    font-size: 13px;
+}
+
+.vizpanel-toggle-option input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.vizpanel-slider-option {
+    margin-bottom: 8px;
+}
+
+.vizpanel-slider-option:last-child {
+    margin-bottom: 0;
+}
+
+.vizpanel-slider-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.vizpanel-slider-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vizpanel-slider-control input[type="range"] {
+    flex: 1;
+    cursor: pointer;
+    height: 18px;
+}
+
+.vizpanel-slider-value {
+    font-size: 12px;
+    color: #555;
+    min-width: 25px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.vizpanel-select-option {
+    margin-bottom: 14px;
+}
+
+.vizpanel-select-option select {
+    width: 100%;
+    padding: 8px; 
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+    cursor: pointer;
+    font-size: 13px;
+    color: #333;
+}
+
+.vizpanel-color-preview {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    gap: 10px; 
+    width: 98%;
+    position: relative;
+    left: 1px;
+    margin: auto;
+}
+
+.vizpanel-color-sample {
+    width: 22px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    flex: 1;
+}
+
+.vizpanel-color-sample.vizpanel-color-selected {
+    border: 2px solid #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.vizpanel-color-sample.vizpanel-color-selected::after {
+    content: '✓';
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    background-color: #2196F3;
+    color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.vizpanel-color-sample:hover {
+    transform: scale(1.05);
+    border-color: #aaa;
+}
+
+.vizpanel-color-sample.vizpanel-color-standard {
+    background: #D0D0D0;
+}
+
+.vizpanel-color-sample.vizpanel-color-monochrome {
+    background: #A3D1FF;
+}
+
+.vizpanel-color-sample.vizpanel-color-pastel {
+    background: #EEEEEE;
+}
+
+.vizpanel-color-sample.vizpanel-color-contrast {
+    background: linear-gradient(45deg, #FFAAA5 25%, #85C1E9 25% 50%, #FFD3B6 50% 75%, #D5AAFF 75%);
+}
+
+.vizpanel-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px; 
+}
+
+.vizpanel-reset-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 8px 14px; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #333;
+    transition: background-color 0.2s ease;
+}
+
+.vizpanel-reset-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.vizpanel-slider-control input[type="range"]:hover + .vizpanel-slider-value {
+    color: #2196F3;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .vizpanel-container {
+        display: none;
+    }
+}

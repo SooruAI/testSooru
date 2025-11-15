@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Dryer symbol</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dryer-symbol" transform="translate(0.000000, 1.000000)">
+            <rect id="Rectangle-5" fill-opacity="0.00999999978" fill="#FFFFFF" x="0.5" y="0" width="42" height="42"></rect>
+            <polygon id="Rectangle-2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" points="1 0 1 41 42 41 42 0"></polygon>
+            <circle id="Oval" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" cx="21.9019608" cy="20.0980392" r="16.0784314"></circle>
+        </g>
+    </g>
+</svg>

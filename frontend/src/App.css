@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+:root {
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+  --font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+}
+*/

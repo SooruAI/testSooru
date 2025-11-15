@@ -1,0 +1,187 @@
+:root {
+  --sf-bg-primary: #ffffff;
+  --sf-text-primary: #000000;
+  --sf-card-bg: rgba(255, 255, 255, 0.8);
+  --sf-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --sf-shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --sf-card-blur: saturate(180%) blur(20px);
+  --sf-blue-500: #1078FF;
+  --sf-blue-700: #05479E;
+  --sf-success: #32d74b;
+}
+
+/* Dark theme (scoped) */
+.dark .sf-container {
+  background-color: #000000 !important;
+}
+.dark .sf-card {
+  background: rgba(29, 29, 31, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+.dark .sf-label,
+.dark .sf-card-description { color: #ffffff !important; }
+.dark .sf-input,
+.dark .sf-textarea,
+.dark .sf-select {
+  background: rgba(29, 29, 31, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+/* Layout */
+.sf-container {
+  min-height: 100vh;
+  background: var(--sf-bg-primary);
+  color: var(--sf-text-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.sf-content { max-width: 1300px; margin: 0 auto; }
+
+.sf-section { padding: 0.5rem 2rem; position: relative; }
+
+/* Card */
+.sf-card {
+  background: var(--sf-card-bg);
+  backdrop-filter: var(--sf-card-blur);
+  -webkit-backdrop-filter: var(--sf-card-blur);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-8px);
+  box-shadow: var(--sf-shadow-lg);
+}
+.sf-card:hover { transform: translateY(-8px); box-shadow: var(--sf-shadow-lg); }
+
+.sf-card-header { margin-bottom: 0; }
+.sf-card-title {
+  font-size: clamp(2.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--sf-text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--sf-blue-700);
+}
+.sf-card-description {
+  color: rgb(18, 18, 18);
+  line-height: 1.6;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  text-align: center;
+}
+.MuiChip-filledDefault{
+  background-color: var(--sf-blue-500)!important;
+  border-color: red!important;
+  font-weight: 600;
+}
+
+/* Typography */
+.sf-section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0rem;
+  background: linear-gradient(90deg, var(--sf-blue-500) 0%, var(--sf-blue-700) 100%);
+  -webkit-text-fill-color: transparent;
+}
+
+/* Forms */
+.sf-field { margin-bottom: 1.5rem; }
+.sf-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+.sf-input,
+.sf-textarea,
+.sf-select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  color: #333;
+  font-size: 1rem;
+}
+.sf-textarea { resize: vertical; }
+.sf-hint { margin-top: 0.5rem; font-size: 0.875rem; color: #666; }
+
+.sf-btn {
+  width: 100%;
+  background-color: var(--sf-blue-500);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sf-btn:hover { background-color: var(--sf-blue-700); }
+.sf-btn-disabled { cursor: not-allowed; opacity: 0.7; }
+
+/* Success banner */
+.sf-success {
+  background: var(--sf-success);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+/* Grid helpers */
+.sf-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sf-section { padding: 0.6rem 1rem; }
+  .sf-card { padding: 1.5rem; }
+  .sf-grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .sf-section { padding: 0.6rem 0.5rem; }
+  .sf-card { padding: 1.25rem; }
+}
+
+
+/* ensure the card can clip the overlay */
+.sf-card {
+  position: relative;
+  overflow: hidden; /* clips the inner-corner glow */
+}
+
+/* inner corner glow overlay */
+.sf-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;                /* cover the card */
+  pointer-events: none;
+  border-radius: inherit;  /* match the card’s rounding */
+  /* four small radial glows positioned at each corner */
+  background:
+    radial-gradient(700px 700px at 18px 18px, rgba(15,120,255,0.18), rgba(15,120,255,0) 60%) ,
+    radial-gradient(700px 700px at calc(100% - 18px) 18px, rgba(15,120,255,0.18), rgba(15,120,255,0) 60%) ,
+    radial-gradient(700px 700px at 18px calc(100% - 18px), rgba(15,120,255,0.18), rgba(15,120,255,0) 60%) ,
+    radial-gradient(700px 700px at calc(100% - 18px) calc(100% - 18px), rgba(15,120,255,0.18), rgba(15,120,255,0) 60%);
+  z-index: 0; /* sits under any absolutely positioned children you might add later */
+}
+
+/* slightly stronger in dark mode so it reads on dark glass */
+.dark .sf-card::after {
+  background:
+    radial-gradient(700px 700px at 18px 18px, rgba(15,120,255,0.25), rgba(15,120,255,0) 60%) ,
+    radial-gradient(700px 700px at calc(100% - 18px) 18px, rgba(15,120,255,0.25), rgba(15,120,255,0) 60%) ,
+    radial-gradient(700px 700px at 18px calc(100% - 18px), rgba(15,120,255,0.25), rgba(15,120,255,0) 60%) ,
+    radial-gradient(700px 700px at calc(100% - 18px) calc(100% - 18px), rgba(15,120,255,0.25), rgba(15,120,255,0) 60%);
+}

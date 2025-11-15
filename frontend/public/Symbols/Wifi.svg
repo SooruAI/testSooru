@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="70px" viewBox="0 0 71 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>Wifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Wifi" transform="translate(1.000000, 0.000000)">
+            <polygon id="Rectangle" fill-opacity="0.02" fill="#FFFFFF" points="0 0 70 0 70 70 0 70"></polygon>
+            <circle id="Oval" fill="#000000" cx="34.5" cy="57.5" r="4.5"></circle>
+            <path d="M0,23.7901677 C9.57970373,13.2633892 21.312458,8 35.1982628,8 C49.0840676,8 60.4230588,13.2633892 69.2152364,23.7901677" id="Path-3" stroke="#000000" stroke-width="2"></path>
+            <path d="M10,34.7409346 C16.9279728,26.9136449 25.4130162,23 35.4551302,23 C45.4972443,23 53.6975211,26.9136449 60.0559606,34.7409346" id="Path-3" stroke="#000000" stroke-width="2"></path>
+            <path d="M19,45.5142816 C23.4339518,40.5047605 28.8644399,38 35.2914642,38 C41.7184886,38 46.966724,40.5047605 51.0361706,45.5142816" id="Path-3" stroke="#000000" stroke-width="2"></path>
+        </g>
+    </g>
+</svg>
