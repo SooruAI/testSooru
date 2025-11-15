@@ -4,8 +4,6 @@ import Footer from '../components/Footer'
 function CancellationRefund() {
     return (
         <div className="legal-page">
-            <Navbar />
-            
             <div className="legal-hero">
                 <h1>Cancellation and Refund Policy</h1>
             </div>
