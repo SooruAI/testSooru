@@ -34,7 +34,7 @@ const LogoutModal: React.FC<LogoutModalProps> = ({
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <div className="modal-content1" onClick={(e) => e.stopPropagation()}>
         <h3 className="modal-title">Confirm Sign Out</h3>
         <p className="modal-text">
           Are you sure you want to Sign Out of your account?
@@ -85,14 +85,16 @@ const Navbar: React.FC = () => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark-theme");
       document.body.classList.add("dark-mode");
+      document.body.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark-theme");
       document.body.classList.remove("dark-mode");
+      document.body.classList.remove("dark");
     }
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
   }, [isDarkMode]);
 
-  // Check auth status
+  // Check auth status and load cached profile immediately
   useEffect(() => {
     checkAuthStatus();
   }, [location.pathname]);
@@ -120,6 +122,17 @@ const Navbar: React.FC = () => {
     setIsLoggedIn(!!token);
 
     if (token) {
+      // Load cached profile immediately to prevent "U" from showing
+      const cachedProfile = localStorage.getItem('userProfile');
+      if (cachedProfile) {
+        try {
+          const profileData = JSON.parse(cachedProfile);
+          setUserProfile(profileData);
+        } catch (e) {
+          console.error("Error parsing cached profile:", e);
+        }
+      }
+      // Then fetch fresh profile data
       fetchUserProfile();
     } else {
       setUserProfile(null);
@@ -129,13 +142,6 @@ const Navbar: React.FC = () => {
   const fetchUserProfile = async (): Promise<void> => {
     const token = localStorage.getItem("access_token");
     if (!token) return;
-
-    const cachedProfile = localStorage.getItem('userProfile');
-    if (cachedProfile) {
-      const profileData = JSON.parse(cachedProfile);
-      setUserProfile(profileData);
-      return;
-    }
 
     try {
       const response = await fetch(`${backendURL}/profile/`, {
@@ -150,6 +156,10 @@ const Navbar: React.FC = () => {
         const data = await response.json();
         setUserProfile(data.profile);
         localStorage.setItem('userProfile', JSON.stringify(data.profile));
+        // Store first letter for quick access
+        if (data.profile.first_name) {
+          localStorage.setItem('user_first_letter', data.profile.first_name.charAt(0).toUpperCase());
+        }
       }
     } catch (error) {
       console.error("Error fetching user profile:", error);
@@ -242,12 +252,40 @@ const Navbar: React.FC = () => {
   };
 
   const getProfileInitial = (): string => {
+    // First check localStorage for cached profile
+    const cachedProfile = localStorage.getItem('userProfile');
+    if (cachedProfile) {
+      try {
+        const profile = JSON.parse(cachedProfile);
+        if (profile.first_name) {
+          return profile.first_name.charAt(0).toUpperCase();
+        }
+      } catch (e) {
+        console.error("Error parsing cached profile:", e);
+      }
+    }
+    
+    // Then check userProfile state
     if (userProfile && userProfile.first_name) {
       return userProfile.first_name.charAt(0).toUpperCase();
     }
+    
+    // Fallback to stored letter
     const storedLetter = localStorage.getItem("user_first_letter");
     if (storedLetter) return storedLetter;
-    return "U";
+    
+    return "";
+  };
+
+  const renderProfileIcon = () => {
+    const initial = getProfileInitial();
+    
+    if (!initial) {
+      // Show User icon while loading
+      return <User size={18} />;
+    }
+    
+    return initial;
   };
 
   return (
@@ -286,7 +324,7 @@ const Navbar: React.FC = () => {
                 className="profile-icon"
                 onClick={() => setShowProfileDropdown(!showProfileDropdown)}
               >
-                {getProfileInitial()}
+                {renderProfileIcon()}
               </div>
               {showProfileDropdown && (
                 <div className="profile-dropdown">

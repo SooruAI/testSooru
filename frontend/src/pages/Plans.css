@@ -1,4 +1,4 @@
-/* Plans.css - Complete with Dark & Light Mode */
+/* Plans.css - Complete with Dark & Light Mode matching Projects page */
 
 /* Base Light Mode Styles */
 .plans-wrapper {
@@ -11,7 +11,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode Base */
+/* Dark Mode Base - FIXED to match Projects page */
 body.dark .plans-wrapper {
   background-color: #2d3142;
   color: #ffffff;
@@ -102,7 +102,7 @@ body.dark .plans-error {
 }
 
 body.dark .loading-spinner {
-  border: 4px solid rgba(255, 255, 255, 0.2);
+  border: 4px solid rgba(124, 157, 209, 0.2);
   border-top: 4px solid #7c9dd1;
 }
 
@@ -123,7 +123,8 @@ body.dark .loading-spinner {
 }
 
 body.dark .plans-back-btn {
-  background: linear-gradient(135deg, #4a5568 0%, #6b7280 100%);
+  background: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
+  color: #000;
 }
 
 .plans-back-btn:hover {
@@ -132,7 +133,7 @@ body.dark .plans-back-btn {
 }
 
 body.dark .plans-back-btn:hover {
-  background: linear-gradient(135deg, #6b7280 0%, #7c9dd1 100%);
+  background: linear-gradient(90deg, #6a8bbf 0%, #8aa1c6 100%);
 }
 
 /* Enhanced Navigation Bar */
@@ -152,8 +153,8 @@ body.dark .plans-back-btn:hover {
 }
 
 body.dark .plans-nav-bar {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-  border-bottom: 2px solid #333;
+  background: linear-gradient(135deg, #2d3142 0%, #3d4451 100%);
+  border-bottom: 2px solid #6b7280;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -206,7 +207,7 @@ body.dark .plans-back-button:hover {
 }
 
 body.dark .plans-nav-divider {
-  background-color: #333;
+  background-color: #6b7280;
 }
 
 .plans-nav-active {
@@ -249,8 +250,9 @@ body.dark .plans-nav-active:hover {
 }
 
 body.dark .plans-create-btn {
-  background: linear-gradient(135deg, #4a5568 0%, #6b7280 100%);
-  box-shadow: 0 3px 12px rgba(74, 85, 104, 0.3);
+  background: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
+  color: #000;
+  box-shadow: 0 3px 12px rgba(124, 157, 209, 0.3);
 }
 
 .plans-create-top {
@@ -264,7 +266,7 @@ body.dark .plans-create-btn {
 }
 
 body.dark .plans-create-btn:hover {
-  background: linear-gradient(135deg, #6b7280 0%, #7c9dd1 100%);
+  background: linear-gradient(90deg, #6a8bbf 0%, #8aa1c6 100%);
   box-shadow: 0 5px 16px rgba(124, 157, 209, 0.4);
 }
 
@@ -284,8 +286,8 @@ body.dark .plans-create-btn:hover {
 }
 
 body.dark .project-info-header {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-  border-bottom: 1px solid #333;
+  background: linear-gradient(135deg, #2d3142 0%, #3d4451 100%);
+  border-bottom: 1px solid #6b7280;
 }
 
 .project-info-main {
@@ -297,14 +299,16 @@ body.dark .project-info-header {
 .project-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #0A499C;
+  color: #2d3e96;
   margin: 0;
   line-height: 1.2;
   transition: color 0.3s ease;
 }
 
 body.dark .project-title {
-  color: #7c9dd1;
+  background: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .project-budget {
@@ -329,7 +333,7 @@ body.dark .project-title {
 }
 
 body.dark .project-detail-item {
-  color: #9ca3af;
+  color: #d1d5db;
 }
 
 .detail-icon {
@@ -394,7 +398,7 @@ body.dark .plans-empty-title {
 }
 
 body.dark .plans-empty-subtitle {
-  color: #9ca3af;
+  color: #d1d5db;
 }
 
 .plans-create-main {
@@ -414,6 +418,7 @@ body.dark .plans-empty-subtitle {
   margin-top: 20px;
 }
 
+/* FIXED: Plan cards remain the same in dark mode */
 .plan-card {
   background: #ffffff;
   border-radius: 12px;
@@ -426,10 +431,11 @@ body.dark .plans-empty-subtitle {
   height: 280px;
 }
 
+/* Dark mode: Keep plan cards the same as light mode */
 body.dark .plan-card {
-  background: #1a1a1a;
+  background: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 1px solid #333;
+  border: 1px solid #e9ecef;
 }
 
 .plan-card:hover {
@@ -440,7 +446,7 @@ body.dark .plan-card {
 
 body.dark .plan-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  border-color: #7c9dd1;
+  border-color: #0A499C;
 }
 
 .plan-card-bg-image {
@@ -456,7 +462,7 @@ body.dark .plan-card:hover {
 }
 
 body.dark .plan-card-bg-image {
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 .plan-card-preview {
@@ -464,8 +470,9 @@ body.dark .plan-card-bg-image {
   transition: background-color 0.3s ease;
 }
 
+/* FIXED: Keep preview background white in dark mode */
 body.dark .plan-card-preview {
-  background: #2a2a2a !important;
+  background: white !important;
 }
 
 .plan-card-dropdown-container {
@@ -491,10 +498,11 @@ body.dark .plan-card-preview {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* FIXED: Keep dropdown button the same in dark mode */
 body.dark .plan-card-dropdown-btn {
-  background: rgba(26, 26, 26, 0.9);
-  border: 1px solid #333;
-  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #666;
 }
 
 .plan-card-dropdown-btn:hover {
@@ -505,9 +513,9 @@ body.dark .plan-card-dropdown-btn {
 }
 
 body.dark .plan-card-dropdown-btn:hover {
-  background: rgba(26, 26, 26, 1);
-  color: #fff;
-  border-color: #7c9dd1;
+  background: rgba(255, 255, 255, 1);
+  color: #333;
+  border-color: #0A499C;
 }
 
 .plan-card-dropdown-menu {
@@ -525,10 +533,11 @@ body.dark .plan-card-dropdown-btn:hover {
   transition: all 0.3s ease;
 }
 
+/* FIXED: Keep dropdown menu the same in dark mode */
 body.dark .plan-card-dropdown-menu {
-  background: #2a2a2a;
+  background: white;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  border: 1px solid #333;
+  border: 1px solid #e9ecef;
 }
 
 .dropdown-item {
@@ -547,7 +556,7 @@ body.dark .plan-card-dropdown-menu {
 }
 
 body.dark .dropdown-item {
-  color: #d1d5db;
+  color: #333;
 }
 
 .dropdown-item:hover {
@@ -555,7 +564,7 @@ body.dark .dropdown-item {
 }
 
 body.dark .dropdown-item:hover {
-  background-color: #333;
+  background-color: #f8f9fa;
 }
 
 .dropdown-item.delete {
@@ -563,7 +572,7 @@ body.dark .dropdown-item:hover {
 }
 
 body.dark .dropdown-item.delete {
-  color: #ff6b6b;
+  color: #dc3545;
 }
 
 .dropdown-item.delete:hover {
@@ -571,7 +580,7 @@ body.dark .dropdown-item.delete {
 }
 
 body.dark .dropdown-item.delete:hover {
-  background-color: rgba(255, 107, 107, 0.1);
+  background-color: #fff5f5;
 }
 
 .plan-card-content {
@@ -586,8 +595,9 @@ body.dark .dropdown-item.delete:hover {
   transition: background 0.3s ease;
 }
 
+/* FIXED: Keep card content the same in dark mode */
 body.dark .plan-card-content {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
 }
 
 .plan-card-header {
@@ -642,8 +652,8 @@ body.dark .plans-modal-overlay {
 }
 
 body.dark .plans-modal-content {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  border: 1px solid #333;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border: 1px solid rgba(124, 157, 209, 0.2);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
@@ -713,8 +723,8 @@ body.dark .plans-modal-content {
 }
 
 body.dark .plans-modal-option {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  border: 2px solid #333;
+  background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+  border: 2px solid rgba(124, 157, 209, 0.2);
 }
 
 .plans-modal-option::before {
@@ -745,7 +755,7 @@ body.dark .plans-modal-option::before {
 }
 
 body.dark .plans-modal-option:hover {
-  background: linear-gradient(135deg, #4a5568 0%, #7c9dd1 100%);
+  background: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
   border-color: #7c9dd1;
   box-shadow: 0 16px 32px rgba(124, 157, 209, 0.4);
 }
@@ -760,10 +770,6 @@ body.dark .plans-modal-option:hover {
   background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
   transform: none;
   box-shadow: none;
-}
-
-body.dark .plans-modal-option:disabled:hover {
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
 .plans-modal-option-icon {
@@ -798,8 +804,8 @@ body.dark .plans-modal-option:disabled:hover {
 }
 
 body.dark .edit-plan-modal {
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: #3d4451;
+  border: 1px solid #6b7280;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
@@ -814,7 +820,8 @@ body.dark .edit-plan-modal {
 }
 
 body.dark .edit-modal-header {
-  background: linear-gradient(135deg, #4a5568 0%, #6b7280 100%);
+  background: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
+  color: #000;
 }
 
 .edit-modal-header h3 {
@@ -836,6 +843,10 @@ body.dark .edit-modal-header {
   justify-content: center;
   font-size: 18px;
   transition: all 0.2s ease;
+}
+
+body.dark .modal-close-btn {
+  color: #000;
 }
 
 .modal-close-btn:hover {
@@ -874,8 +885,8 @@ body.dark .edit-label {
 }
 
 body.dark .edit-input {
-  border: 2px solid #333;
-  background: #2a2a2a;
+  border: 2px solid #6b7280;
+  background: #4a5568;
   color: #ffffff;
 }
 
@@ -899,7 +910,7 @@ body.dark .edit-input:focus {
 }
 
 body.dark .edit-modal-actions {
-  background: #0a0a0a;
+  background: #2d3142;
 }
 
 .edit-btn {
@@ -935,7 +946,8 @@ body.dark .save-btn:hover {
 }
 
 body.dark .advanced-btn {
-  background: linear-gradient(135deg, #4a5568 0%, #6b7280 100%);
+  background: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
+  color: #000;
 }
 
 .advanced-btn:hover {
@@ -944,7 +956,7 @@ body.dark .advanced-btn {
 }
 
 body.dark .advanced-btn:hover {
-  background: linear-gradient(135deg, #6b7280 0%, #7c9dd1 100%);
+  background: linear-gradient(90deg, #6a8bbf 0%, #8aa1c6 100%);
 }
 
 .edit-btn:disabled {
@@ -1008,8 +1020,8 @@ body.dark .center-loading-spinner {
 }
 
 body.dark .delete-plan-modal {
-  background: #1a1a1a;
-  border: 1px solid #333;
+  background: #3d4451;
+  border: 1px solid #6b7280;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
 }
 
@@ -1022,7 +1034,7 @@ body.dark .delete-plan-modal {
 }
 
 body.dark .delete-modal-header {
-  background: linear-gradient(135deg, #ff6b6b 0%, #dc2626 100%);
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
 }
 
 .delete-modal-header h3 {
@@ -1078,7 +1090,7 @@ body.dark .warning-text {
 }
 
 body.dark .delete-modal-actions {
-  background: #0a0a0a;
+  background: #2d3142;
 }
 
 .delete-btn {
@@ -1096,9 +1108,9 @@ body.dark .delete-modal-actions {
 }
 
 body.dark .cancel-btn {
-  background: #333;
+  background: #4a5568;
   color: white;
-  border: 1px solid #555;
+  border: 1px solid #6b7280;
 }
 
 .cancel-btn:hover {
@@ -1107,7 +1119,7 @@ body.dark .cancel-btn {
 }
 
 body.dark .cancel-btn:hover {
-  background: #444;
+  background: #6b7280;
 }
 
 .confirm-btn {
@@ -1116,7 +1128,7 @@ body.dark .cancel-btn:hover {
 }
 
 body.dark .confirm-btn {
-  background: linear-gradient(135deg, #ff6b6b 0%, #dc2626 100%);
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
 }
 
 .confirm-btn:hover {
@@ -1125,7 +1137,7 @@ body.dark .confirm-btn {
 }
 
 body.dark .confirm-btn:hover {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  background: linear-gradient(135deg, #bd2130 0%, #a71e2a 100%);
 }
 
 .delete-btn:disabled {
@@ -1243,7 +1255,7 @@ body.dark .confirm-btn:hover {
 }
 
 body.dark .plans-wrapper::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #2d3142;
 }
 
 .plans-wrapper::-webkit-scrollbar-thumb {
@@ -1252,7 +1264,7 @@ body.dark .plans-wrapper::-webkit-scrollbar-track {
 }
 
 body.dark .plans-wrapper::-webkit-scrollbar-thumb {
-  background: #444;
+  background: #6b7280;
 }
 
 .plans-wrapper::-webkit-scrollbar-thumb:hover {
@@ -1260,5 +1272,5 @@ body.dark .plans-wrapper::-webkit-scrollbar-thumb {
 }
 
 body.dark .plans-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #666;
+  background: #7c9dd1;
 }

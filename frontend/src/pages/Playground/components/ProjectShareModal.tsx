@@ -44,16 +44,19 @@ const modalStyles = `
   --modal-secondary-btn-text: #374151;
 }
 
-/* This selector is now fixed: 'body.dark' comes first */
-body.dark .project-share-modal-vars {
-  --modal-bg: #1f2937;
+/* FIXED: Multiple selectors to catch all dark mode scenarios */
+.project-container.dark-mode .project-share-modal-vars,
+body.dark .project-share-modal-vars,
+.dark-mode .project-share-modal-vars,
+[data-theme="dark"] .project-share-modal-vars {
+  --modal-bg: #3d4451;
   --modal-text: #f9fafb;
   --modal-text-light: #9ca3af;
-  --modal-border: #4b5563;
-  --modal-input-bg: #374151;
-  --modal-input-border: #4b5563;
+  --modal-border: #6b7280;
+  --modal-input-bg: #4a5568;
+  --modal-input-border: #6b7280;
   --modal-input-text: #f9fafb;
-  --modal-secondary-btn-bg: #4b5563;
+  --modal-secondary-btn-bg: #4a5568;
   --modal-secondary-btn-hover: #525f76;
   --modal-secondary-btn-text: #f3f4f6;
 }
@@ -358,7 +361,6 @@ const ProjectShareModal: React.FC<PlanShareModalProps> = ({ project, onClose }) 
     */
   const getProjectLocation = (project: Project): string => {
     const parts = [project.city, project.state, project.country].filter(Boolean);
-    // This is the line that was fixed (added closing quote)
     return parts.length > 0 ? parts.join(', ') : 'Location not specified';
   };
 
@@ -449,15 +451,6 @@ const ProjectShareModal: React.FC<PlanShareModalProps> = ({ project, onClose }) 
                 </button>
               </div>
             </div>
-          </div>
-
-          <div className="project-share-modal-actions">
-            <button
-              className="project-share-modal-btn project-share-modal-cancel-btn"
-              onClick={onClose}
-            >
-              Close
-            </button>
           </div>
         </div>
       </div>

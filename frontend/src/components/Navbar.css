@@ -1,6 +1,6 @@
 /* Root Theme Variables */
 :root {
-    --navbar-bg: #F5F5F5;
+    --navbar-bg: #ffffff;
     --navbar-text: #2d3e96;
     --navbar-text-hover: #1e2a6b;
     --navbar-border: transparent;
@@ -18,12 +18,13 @@
 
 /* Dark Theme */
 .dark-theme,
-body.dark-mode {
+body.dark-mode,
+body.dark {
     --navbar-bg: #2d3142;
     --navbar-text: #ffffff;
     --navbar-text-hover: #d1d5db;
     --navbar-border: #4a5568;
-    --profile-bg: linear-gradient(to right, #1868d9, #0a499c);
+    --profile-bg: linear-gradient(90deg, #7c9dd1 0%, #9cb3d8 100%);
     --dropdown-bg: #1f2937;
     --dropdown-text: #d1d5db;
     --dropdown-hover: #374151;
@@ -70,7 +71,8 @@ body.dark-mode {
 }
 
 .dark-theme .logo-img,
-body.dark-mode .logo-img {
+body.dark-mode .logo-img,
+body.dark .logo-img {
     filter: invert(1);
 }
 
@@ -196,6 +198,7 @@ body.dark-mode .logo-img {
     position: relative;
 }
 
+/* FIXED: Profile icon with proper dark mode colors */
 .profile-icon {
     width: 36px;
     height: 36px;
@@ -207,8 +210,16 @@ body.dark-mode .logo-img {
     align-items: center;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.3s ease;
     font-size: 1rem;
+}
+
+/* Dark mode profile icon - keep white text */
+.dark-theme .profile-icon,
+body.dark-mode .profile-icon,
+body.dark .profile-icon {
+    color: #000000;
+    font-weight: 700;
 }
 
 .profile-icon:hover {
@@ -243,6 +254,55 @@ body.dark-mode .logo-img {
     background: var(--dropdown-hover);
 }
 
+/* Light mode hover - ensure text stays dark */
+:root .dropdown-item:hover,
+:not(.dark-theme):not(.dark-mode):not(.dark) .dropdown-item:hover {
+    color: #333 !important;
+}
+
+:root .dropdown-item:hover svg,
+:not(.dark-theme):not(.dark-mode):not(.dark) .dropdown-item:hover svg {
+    color: #333 !important;
+}
+
+/* Ensure dropdown items are visible in dark mode */
+.dark-theme .dropdown-item,
+body.dark-mode .dropdown-item,
+body.dark .dropdown-item {
+    color: #d1d5db;
+}
+
+.dark-theme .dropdown-item span,
+body.dark-mode .dropdown-item span,
+body.dark .dropdown-item span {
+    color: #d1d5db;
+}
+
+.dark-theme .dropdown-item svg,
+body.dark-mode .dropdown-item svg,
+body.dark .dropdown-item svg {
+    color: #d1d5db;
+}
+
+/* Dark mode hover - make text BLACK for contrast */
+.dark-theme .dropdown-item:hover,
+body.dark-mode .dropdown-item:hover,
+body.dark .dropdown-item:hover {
+    color: #000000 !important;
+}
+
+.dark-theme .dropdown-item:hover span,
+body.dark-mode .dropdown-item:hover span,
+body.dark .dropdown-item:hover span {
+    color: #000000 !important;
+}
+
+.dark-theme .dropdown-item:hover svg,
+body.dark-mode .dropdown-item:hover svg,
+body.dark .dropdown-item:hover svg {
+    color: #000000 !important;
+}
+
 .logout-item {
     color: #ff0000 !important;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -250,8 +310,22 @@ body.dark-mode .logo-img {
 }
 
 .dark-theme .logout-item,
-body.dark-mode .logout-item {
+body.dark-mode .logout-item,
+body.dark .logout-item {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ff6b6b !important;
+}
+
+.dark-theme .logout-item span,
+body.dark-mode .logout-item span,
+body.dark .logout-item span {
+    color: #ff6b6b !important;
+}
+
+.dark-theme .logout-item svg,
+body.dark-mode .logout-item svg,
+body.dark .logout-item svg {
+    color: #ff6b6b !important;
 }
 
 /* Hamburger Menu */
@@ -330,13 +404,19 @@ body.dark-mode .logout-item {
 }
 
 .mobile-theme-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
     padding: 0.75rem 0;
     color: var(--navbar-text);
     font-weight: 500;
     font-size: 1.1rem;
+    width: fit-content;
+    max-width: fit-content;
+}
+
+.mobile-theme-item .theme-toggle-switch {
+    flex-shrink: 0;
 }
 
 .mobile-logout-btn {
@@ -375,7 +455,7 @@ body.dark-mode .logout-item {
     z-index: 2000;
 }
 
-.modal-content {
+.modal-content1 {
     background: var(--modal-bg);
     padding: 25px;
     border-radius: 10px;
@@ -496,6 +576,13 @@ body.dark-mode .logout-item {
 
     .navbar {
         padding: 1.5rem 4%;
+    }
+
+    /* Ensure mobile theme toggle stays compact */
+    .mobile-theme-item .theme-toggle-switch {
+        width: 52px;
+        min-width: 52px;
+        max-width: 52px;
     }
 }
 
